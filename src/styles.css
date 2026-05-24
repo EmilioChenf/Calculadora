@@ -1,0 +1,172 @@
+:root {
+  color: #eff6ff;
+  background: #08111f;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+}
+
+.lab-stage {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 28px;
+  background:
+    radial-gradient(circle at 18% 16%, rgb(183 247 216 / 18%), transparent 28%),
+    radial-gradient(circle at 84% 10%, rgb(255 202 212 / 16%), transparent 30%),
+    linear-gradient(135deg, #07101d 0%, #111827 52%, #15121f 100%);
+}
+
+.calculator-shell {
+  width: min(390px, 100%);
+  padding: 18px;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 16%);
+  border-radius: 28px;
+  background: linear-gradient(145deg, rgb(255 255 255 / 12%), rgb(255 255 255 / 5%));
+  box-shadow: 0 24px 70px rgb(0 0 0 / 42%), inset 0 1px 0 rgb(255 255 255 / 20%);
+  backdrop-filter: blur(22px);
+}
+
+.shell-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 4px 4px 14px;
+}
+
+.shell-header p {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.shell-header span {
+  color: #b7f7d8;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.display-panel {
+  min-height: 130px;
+  padding: 18px;
+  border: 1px solid rgb(255 255 255 / 14%);
+  border-radius: 20px;
+  background: linear-gradient(160deg, rgb(8 17 31 / 82%), rgb(30 41 59 / 62%));
+  box-shadow: inset 0 1px 24px rgb(183 247 216 / 8%);
+}
+
+.status-pill {
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: #0f172a;
+  background: #b7f7d8;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.status-pill.typing {
+  background: #c7d2fe;
+}
+
+.status-pill.result {
+  background: #fde68a;
+}
+
+.status-pill.error {
+  background: #ffcad4;
+}
+
+.display-value {
+  display: block;
+  width: 100%;
+  margin-top: 22px;
+  overflow: hidden;
+  color: #ffffff;
+  font-size: clamp(2.45rem, 13vw, 4.3rem);
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1;
+  text-align: right;
+  text-shadow: 0 0 26px rgb(199 210 254 / 22%);
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.calc-button {
+  min-height: 64px;
+  border: 1px solid rgb(255 255 255 / 14%);
+  border-radius: 16px;
+  color: #f8fafc;
+  background: rgb(255 255 255 / 8%);
+  box-shadow: 0 10px 24px rgb(0 0 0 / 22%), inset 0 1px 0 rgb(255 255 255 / 12%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 800;
+  transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+}
+
+.calc-button:hover {
+  background: rgb(255 255 255 / 14%);
+  transform: translateY(-2px);
+}
+
+.calc-button:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.calc-button.operator {
+  color: #0f172a;
+  background: #c7d2fe;
+}
+
+.calc-button.control {
+  color: #0f172a;
+  background: #ffcad4;
+}
+
+.calc-button.equals {
+  grid-column: span 2;
+  color: #0f172a;
+  background: linear-gradient(135deg, #b7f7d8, #fde68a);
+}
+
+@media (width <= 420px) {
+  .lab-stage {
+    padding: 14px;
+  }
+
+  .calculator-shell {
+    border-radius: 22px;
+  }
+
+  .calc-button {
+    min-height: 58px;
+    border-radius: 14px;
+  }
+}
