@@ -1,0 +1,7 @@
+node_modules
+dist
+coverage
+.git
+.storybook-static
+storybook-static
+npm-debug.log
