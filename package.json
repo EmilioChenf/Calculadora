@@ -10,7 +10,7 @@
     "build:vite": "node scripts/tool-runner.mjs build",
     "preview": "vite preview",
     "test": "node --experimental-strip-types scripts/calculator-node.test.mjs",
-    "test:bun": "bun test",
+    "test:bun": "bun test src/tests",
     "lint": "node scripts/lint.mjs",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "node scripts/tool-runner.mjs storybook"
