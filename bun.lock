@@ -22,6 +22,7 @@
         "eslint": "^9.0.0",
         "eslint-plugin-react-hooks": "^5.0.0",
         "eslint-plugin-react-refresh": "^0.4.0",
+        "standard": "^17.1.2",
         "storybook": "^8.6.14",
         "typescript": "^5.8.0",
       },

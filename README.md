@@ -25,12 +25,22 @@ bun install
 ```bash
 bun run dev
 bun run build
+bun run build:vite
 bun run preview
 bun run test
 bun run lint
 bun run storybook
 bun run build-storybook
 ```
+
+## Entrega
+
+- Codigo: https://github.com/EmilioChenf/Calculadora
+- Produccion: https://emiliochenf.github.io/Calculadora/
+- Publicacion automatica: `.github/workflows/pages.yml`
+
+El workflow de GitHub Pages instala dependencias con Bun, ejecuta tests, ejecuta lint, genera `dist/` con Vite y publica
+la calculadora en el enlace de produccion.
 
 ## Docker
 
