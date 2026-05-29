@@ -25,7 +25,6 @@ bun install
 ```bash
 bun run dev
 bun run build
-bun run build:vite
 bun run preview
 bun run test
 bun run lint

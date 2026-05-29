@@ -6,11 +6,11 @@
   "packageManager": "bun@1.2.0",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "node scripts/verify-build.mjs",
+    "build": "tsc -b && vite build",
     "build:vite": "tsc -b && vite build",
     "preview": "vite preview",
-    "test": "node src/tests/calculatorChenin.node.test.mjs",
-    "lint": "node scripts/strict-lint.mjs",
+    "test": "bun test",
+    "lint": "standard \"scripts/**/*.mjs\" && node scripts/strict-lint.mjs",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
